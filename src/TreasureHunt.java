@@ -23,8 +23,8 @@ public class TreasureHunt implements KeyEventDispatcher {
 		// 1. Make the tortoise move up the screen
 		Tortoise.setAngle(0);
 		Tortoise.move(5);
-		System.out.println(Tortoise.getX());
-		System.out.println(Tortoise.getY());
+		// System.out.println(Tortoise.getX());
+		// System.out.println(Tortoise.getY());
 
 	}
 
@@ -32,8 +32,8 @@ public class TreasureHunt implements KeyEventDispatcher {
 		// 2. make the tortoise move down the screen
 		Tortoise.setAngle(180);
 		Tortoise.move(5);
-		System.out.println(Tortoise.getX());
-		System.out.println(Tortoise.getY());
+		// System.out.println(Tortoise.getX());
+		// System.out.println(Tortoise.getY());
 	}
 
 	private void goLeft() {
@@ -41,16 +41,16 @@ public class TreasureHunt implements KeyEventDispatcher {
 		// Hint: the turn() method lags more than setAngle()
 		Tortoise.setAngle(270);
 		Tortoise.move(5);
-		System.out.println(Tortoise.getX());
-		System.out.println(Tortoise.getY());
+		// System.out.println(Tortoise.getX());
+		// System.out.println(Tortoise.getY());
 	}
 
 	private void goRight() {
 		// 4. make the tortoise move right
 		Tortoise.setAngle(90);
 		Tortoise.move(5);
-		System.out.println(Tortoise.getX());
-		System.out.println(Tortoise.getY());
+		// System.out.println(Tortoise.getX());
+		// System.out.println(Tortoise.getY());
 	}
 
 	private void spaceBarWasPressed() {
@@ -71,8 +71,47 @@ public class TreasureHunt implements KeyEventDispatcher {
 		int SEGirlX = 515;
 		int SEGirlY = 350;
 
-			if (NWGirlX<NEGirlX && NEGirlX>NWGirlX && NWGirlY<SWGirlY && SWGirlY>NWGirlY) {
+			if (tortoiseLocationX<SEGirlX && tortoiseLocationX>NWGirlX && tortoiseLocationY<SEGirlY && tortoiseLocationY>NEGirlY) {
 				JOptionPane.showMessageDialog(null, "Pirate Robot" );
+			}
+		
+		int NWPirateX = 390;
+		int NWPirateY = 225;
+		int NEPirateX = 425;
+		int NEPirateY = 225;
+		int SWPirateX = 390;
+		int SWPirateY = 330;
+		int SEPirateX = 440;
+		int SEPirateY = 330;
+		
+			if(tortoiseLocationX<SEPirateX && tortoiseLocationX>NWPirateX && tortoiseLocationY<SEPirateY && tortoiseLocationY>NEPirateY) {
+				JOptionPane.showMessageDialog(null, "Parrot");
+			}
+			
+		int NWParrotX = 405;
+		int NWParrotY = 95;
+		int NEParrotX = 420;
+		int NEParrotY = 95;
+		int SWParrotX = 405;
+		int SWParrotY = 115;
+		int SEParrotX = 420;
+		int SEParrotY = 115;
+		
+			if(tortoiseLocationX<SEParrotX && tortoiseLocationX>NWParrotX && tortoiseLocationY<SEParrotY && tortoiseLocationY>NEParrotY) {
+			JOptionPane.showMessageDialog(null, "Swamp");	
+			}
+			
+		int NWSwampX = 45;
+		int NWSwampY = 385;
+		int NESwampX = 515;
+		int NESwampY = 385;
+		int SWSwampX = 45;
+		int SWSwampY = 440;
+		int SESwampX = 515;
+		int SESwampY = 440;
+		
+			if(tortoiseLocationX<SESwampX && tortoiseLocationX>NWSwampX && tortoiseLocationY<SESwampY && tortoiseLocationY>NESwampY) {
+				JOptionPane.showMessageDialog(null, "You're finally done");
 			}
 		// 7. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
