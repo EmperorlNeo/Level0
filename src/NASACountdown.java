@@ -7,12 +7,14 @@ public class NASACountdown {
 			// 3. convert the user's answer to an int (Integer.parseInt)
 			int start = Integer.parseInt(answer);
 			// 4. countdown from user's starting point
-			
+			for(int i=start; i>=0; i--) {
+			}
 			// 1. countdown from 10 to 0
-			for(int i=10; i>=0; i--) {
+			for(int i=10; i>0; i--) {
 				speak(Integer.toString(i));
 			}
 			// 5. when the counting is done, print "blastoff!"
+			JOptionPane.showMessageDialog(null, "BLASTOFF!");
 			
 		}
 
