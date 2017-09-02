@@ -16,5 +16,5 @@ ellipse(318,175,50,50);
 fill(0,0,0);
 ellipse(69,187,15,15);
 fill(0,0,0);
-ellipse(318,175,15,15);
+ellipse(mouseX,mouseY,15,15);
 }
