@@ -1,3 +1,5 @@
+import org.teachingextensions.logo.Tortoise;
+
 public class MoustachesCheckpoint2{
 
     static int tortoiseLocation;{
@@ -6,7 +8,6 @@ public class MoustachesCheckpoint2{
 
 
         tortoiseLocation = Tortoise.getLocation();
-
 
         if (tortoiseLocation < 0) 
 
